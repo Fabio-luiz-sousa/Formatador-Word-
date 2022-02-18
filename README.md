@@ -1,2 +1,2 @@
-# Formatador-Word-
+# Formatador-Word
 Projeto em construção 🛠️🚧
