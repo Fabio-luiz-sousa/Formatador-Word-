@@ -1,10 +1,9 @@
 import os
 from docx import Document
-from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT, WD_TAB_LEADER
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Pt, Cm
 from docx.enum.style import WD_STYLE_TYPE
-from docx.enum.text import WD_LINE_SPACING
-from docx.text.tabstops import TabStops
+
 
 doc = Document()
 
@@ -160,9 +159,10 @@ def descricao_contracapa(curso, universidade, orientador):
     estilo_descricao_contracapa.font.name = 'Arial'
     estilo_descricao_contracapa.font.size = Pt(12)
     p_descricao_contracapa = doc.add_paragraph(
-        f'\t\t\t\t\t\t\tTrabalho Apresentado no curso de\n\t\t\t\t\t\t\t{curso} da {universidade}\n\n\t\t\t\t\t\t\tOrientador: {orientador}', 'Estilo_Descricao_Contra')
+        f'Trabalho Apresentado no curso de\n{curso} da {universidade}\n\nOrientador: {orientador}', 'Estilo_Descricao_Contra')
     p_descricao_contracapa.alignment = 0
     p_descricao_contracapa_format = p_descricao_contracapa.paragraph_format
+    p_descricao_contracapa_format.left_indent=Cm(8)
     p_descricao_contracapa_format.space_after = Cm(4)
 
 

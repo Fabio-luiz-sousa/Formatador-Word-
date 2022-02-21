@@ -26,7 +26,7 @@ if op == '1':
             break
     nome_autores(t_2)
 
-    t3 = input('Dfigite o titulo do trabalho: ')
+    t3 = input('Digite o titulo do trabalho: ')
     t3 = t3.upper()
     titulo_trabalho(t3)
     t5 = input('Digite o subitulo do trabalho: ')
@@ -39,7 +39,7 @@ if op == '1':
     ano(t7)
     ori = input('Digite o nome do orientador: ')
     ori = ori.title()
-    tsave = input('digite o nome do documento para ser salvo: ')
+    tsave = input('Digite o nome do documento para ser salvo: ')
     t4=t4.title()
     t1=t1.title()
 
@@ -47,6 +47,11 @@ if op == '1':
     titulo_trabalho_contracapa(t3)
     subtitulo_trabalho_contracapa(t5)
     descricao_contracapa(t4, t1, ori)  
+    cidade_contracapa(t6)
     ano_contracapa(t7)
 
-    salvar_doc(tsave)
+    salvar_doc(tsave) 
+
+ 
+
+
